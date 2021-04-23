@@ -20,9 +20,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:dev
-
-
-      # - run: docker build -t ghcr.io/varotsk137/bookinfo-ratings:dev .
-      # - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      # - run: docker push ghcr.io/varotsk137/bookinfo-ratings:dev
+          tags: user/app:latest
