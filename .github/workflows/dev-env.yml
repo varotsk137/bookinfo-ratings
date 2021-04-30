@@ -46,3 +46,11 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
+  acceptance-test:
+    needs: deploy
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: curl http://bookinfo.dev.opsta.net/student80/ratings/health | grep "Ratings is working"
+      - run: echo $?
