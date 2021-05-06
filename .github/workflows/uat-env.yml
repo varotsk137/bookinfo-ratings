@@ -53,4 +53,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - run: curl http://bookinfo.uat.opsta.net/student80/ratings/health | grep "Ratings is working"
-      - run: echo $?
+      - run: echo $? 
